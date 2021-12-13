@@ -18,8 +18,9 @@ App.use(express.static(path.join(__dirname, '../public')))
 // Routes
 App.use(routes)
 
+// 404
 App.use((req, res) => {
-  res.send('página não encontrada')
+  res.render('pages/404')
 })
 
 App.listen(process.env.PORT, () => console.log('Server is running'))
